@@ -1,0 +1,127 @@
+@import 'reset';
+@import 'fonts';
+@import 'vars';
+
+body {
+  background-color: $white;
+  color: $black;
+  font-size: 14px;
+  @extend %l400;
+}
+.container {
+  max-width: 1030px;
+  padding: 0 10px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.navbar {
+  padding-top: 17px;
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .menu {
+    width: 440px;
+    @extend %l400;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    gap: 20px;
+    &__item :hover {
+      @extend %l700;
+    }
+  }
+  .addition {
+    display: flex;
+    gap: 25px;
+    &__lang {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+    &__authorization-btn {
+      border-radius: 6px;
+      background-color: transparent;
+      border: 1px solid #fff;
+      color: inherit;
+      width: 100px;
+      height: 40px;
+      cursor: pointer;
+    }
+  }
+}
+
+.logo {
+  @extend %l700;
+  font-size: 18px;
+  text-transform: uppercase;
+  & a {
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+  }
+}
+
+.header {
+  min-height: 100vh;
+  color: $white;
+  font-size: 14px;
+  line-height: 22px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  background-image: url(./../img/background.jpg);
+  position: relative;
+  z-index: 1;
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(213, 32, 71, 0.8) 0%,
+      rgba(238, 61, 27, 0.8) 100%
+    );
+  }
+  .hero {
+    text-align: center;
+    margin-top: 25vh;
+    display: flex;
+    flex-direction: column;
+    gap: 39px;
+    align-items: center;
+    &__title {
+      font-size: 72px;
+      line-height: 86.4px;
+      letter-spacing: 0.05em;
+      @extend %l700;
+      text-transform: uppercase;
+    }
+    &__text {
+      font-size: 24px;
+      line-height: 150%;
+      @extend %l600;
+    }
+    &__btn {
+      width: 160px;
+      height: 50px;
+      background-color: $white;
+      cursor: pointer;
+      border-radius: 6px;
+      border: none;
+      text-transform: uppercase;
+      font-size: 14px;
+      @extend %l600;
+      color: #ed4c5c;
+    }
+  }
+}
