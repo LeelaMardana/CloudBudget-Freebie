@@ -125,3 +125,44 @@ body {
     }
   }
 }
+
+.title {
+  font-size: 36px;
+  line-height: 43px;
+  @extend %l600;
+  margin-bottom: 25px;
+}
+
+.about {
+  padding: 95px 0;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__content {
+    max-width: 445px;
+    &-text {
+      margin-bottom: 25px;
+    }
+    &-link {
+      color: #ed4c5c;
+    }
+  }
+  &__popup {
+    max-width: 478px;
+    position: relative;
+    padding-left: 33px;
+    &-wrap {
+      border-radius: 15px;
+      overflow: hidden;
+      max-width: 445px;
+    }
+    &-link {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
