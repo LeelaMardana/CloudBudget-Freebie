@@ -7,6 +7,7 @@ body {
   color: $black;
   font-size: 14px;
   @extend %l400;
+  line-height: 140%;
 }
 .container {
   max-width: 1130px;
@@ -145,7 +146,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    line-height: 140%;
     &-title {
       margin-bottom: 16px;
     }
@@ -338,5 +338,72 @@ body {
   img {
     width: 100%;
     height: 100%;
+  }
+}
+
+.contact {
+  padding: 120px 0;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content {
+    max-width: 445px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  &__form {
+    display: grid;
+    width: 540px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(60px, auto);
+    column-gap: 30px;
+    row-gap: 27px;
+    &-item {
+      border: 1px solid #333333;
+      outline-color: #ed4c5c;
+      border-radius: 6px;
+      padding: 0 31px;
+      text-decoration: none;
+      &::placeholder {
+        color: rgba(19, 39, 67, 0.5);
+      }
+    }
+    &-btn {
+      height: 50px;
+      max-width: 160px;
+      text-transform: uppercase;
+      color: $white;
+      cursor: pointer;
+      background-color: #ed4c5c;
+      border: 1.5px solid #ed4c5c;
+      border-radius: 6px;
+    }
+    & .input-phone,
+    & .input-select {
+      grid-column: span 2;
+    }
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAICAYAAADJEc7MAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACYSURBVHgBjc6xCoMwFAVQ7avaIgXp5BQ7dCidOnZ06N6hQ7/R0T/wK9yELELAVTESBbmDIJKoFwLJfTkkdL1/3h5jtRRcWjsSvOLgdLk9Dp3b82NDfxR7EO4qxxKkKl7bYVR6kn4uiwrTyxNqnSFt8kwQyi28ROhoGpqwDiH28kv+Mw7Pir69PyQ465AWzjH2OrQaYCzTfAQX0l1OI8R04QAAAABJRU5ErkJggg==');
+  background-repeat: no-repeat;
+  background-position: 96% center;
+  background-color: transparent;
+  color: rgba(19, 39, 67, 0.5);
+
+  cursor: pointer;
+  &:not([size]):focus {
+    outline: none;
+    color: rgba(19, 39, 67);
+  }
+  &:active,
+  &:focus {
+    outline: none;
   }
 }
