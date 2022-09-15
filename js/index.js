@@ -1,3 +1,5 @@
+const menu = document.querySelector('.menu');
+
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   loop: true,
@@ -11,4 +13,18 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-swiper();
+//функция плавного скролла
+const scrollTo = id => {
+  document.querySelector(id).scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+  });
+};
+
+// запуск плавного скролла
+menu.addEventListener('click', e => {
+  if (e.target.closest('li a')) {
+    e.preventDefault();
+    scrollTo(e.target.closest('li a').getAttribute('href'));
+  }
+});

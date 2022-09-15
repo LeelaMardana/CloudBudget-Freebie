@@ -407,3 +407,38 @@ select {
     outline: none;
   }
 }
+
+.footer {
+  padding: 85px 0;
+  background-color: #fafafa;
+  font-size: 12px;
+  line-height: 160%;
+  color: #101010;
+  &__items {
+    margin-bottom: 86px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item-title {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 254px;
+    @extend %l700;
+    margin-bottom: 30px;
+  }
+  .phone {
+    margin-bottom: 20px;
+  }
+  .social {
+    max-width: 66px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .support {
+    margin-bottom: 33px;
+  }
+  .payment {
+    width: 216px;
+    height: 31px;
+  }
+}
