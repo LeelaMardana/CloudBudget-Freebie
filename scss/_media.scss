@@ -3,6 +3,9 @@
     justify-content: space-between;
     gap: 0;
   }
+  .about__popup-wrap {
+    height: 100%;
+  }
   .features__items {
     gap: 20px;
     flex-direction: column;
@@ -27,6 +30,11 @@
       width: 100%;
     }
   }
+  .footer__items {
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 @media (max-width: 992px) {
   .about__wrapper {
@@ -35,6 +43,7 @@
   }
   .about__content {
     max-width: 100%;
+    text-align: center;
   }
   .about__popup {
     max-width: 100%;
@@ -63,6 +72,9 @@
   }
   .gallery__content {
     max-width: 800px;
+  }
+  .gallery__title {
+    text-align: center;
   }
   .swiper {
     max-height: 400px;
@@ -165,6 +177,9 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
+  }
+  .footer .social {
+    justify-content: center;
   }
   .copyright {
     text-align: center;

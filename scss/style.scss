@@ -3,7 +3,6 @@
 @import 'vars';
 @import 'navbar';
 
-
 body {
   background-color: $white;
   color: $black;
@@ -12,7 +11,7 @@ body {
   line-height: 140%;
 }
 .container {
-  max-width: 1140px;
+  max-width: 1137px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -60,14 +59,14 @@ body {
   }
   .hero {
     text-align: center;
-    margin-top: 25vh;
+    margin-top: 16vh;
     display: flex;
     flex-direction: column;
     gap: 39px;
     align-items: center;
     &__title {
       font-size: 72px;
-      line-height: 86.4px;
+      line-height: 83.4px;
       letter-spacing: 0.05em;
       @extend %l700;
       text-transform: uppercase;
@@ -75,6 +74,7 @@ body {
     &__text {
       font-size: 24px;
       line-height: 150%;
+      margin-bottom: 14px;
       @extend %l600;
     }
     &__btn {
@@ -94,25 +94,24 @@ body {
 
 .title {
   font-size: 36px;
-  line-height: 43px;
+  line-height: 40px;
   @extend %l600;
 }
 
 .about {
-  padding: 95px 0;
-
+  padding: 94px 0 95px;
   &__wrapper {
     display: flex;
-    gap: 100px;
+    gap: 92px;
     align-items: center;
   }
   &__content {
     max-width: 445px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
     &-title {
-      margin-bottom: 16px;
+      margin-bottom: 30px;
     }
     &-link {
       color: #ed4c5c;
@@ -126,6 +125,10 @@ body {
       border-radius: 15px;
       overflow: hidden;
       max-width: 445px;
+      height: 311px;
+      img {
+        height: 100%;
+      }
     }
     &-link {
       position: absolute;
@@ -140,7 +143,7 @@ body {
   padding: 63px 0 50px;
   &__title {
     text-align: center;
-    margin-bottom: 63px;
+    margin-bottom: 76px;
   }
   &__items {
     display: flex;
@@ -185,7 +188,7 @@ body {
       position: absolute;
       transform: translateX(-50%);
       left: 50%;
-      top: 146.5px;
+      top: 156.5px;
       background-color: $white;
       display: flex;
       flex-direction: column;
@@ -195,12 +198,15 @@ body {
 }
 
 .technology {
-  padding: 63px 0 124px;
+  padding: 63px 0 132px;
   color: #101010;
   text-align: center;
+  &__title {
+    margin-bottom: 65px;
+  }
   &__items {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   &__item {
     max-width: 190px;
@@ -243,17 +249,17 @@ body {
 .gallery {
   color: $white;
   background-color: #ed4c5c;
-  padding: 95px 0;
+  padding: 94px 0 95px;
   &__wrapper {
     display: flex;
-    justify-content: space-between;
+    gap: 125px;
     align-items: center;
   }
   &__content {
     max-width: 445px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 45px;
   }
   &__slider {
     position: relative;
@@ -307,7 +313,7 @@ body {
 }
 
 .contact {
-  padding: 120px 0;
+  padding: 120px 0 114px;
   &__wrapper {
     display: flex;
     gap: 30px;
@@ -325,7 +331,7 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(60px, auto);
     column-gap: 30px;
-    row-gap: 27px;
+    row-gap: 24px;
     &-item {
       border: 1px solid #333333;
       outline-color: #ed4c5c;
@@ -381,9 +387,12 @@ select {
   line-height: 160%;
   color: #101010;
   &__items {
-    margin-bottom: 86px;
+    margin-bottom: 100px;
     display: flex;
-    justify-content: space-between;
+    gap: 107px;
+  }
+  &__item :not(:last-child) {
+    width: 180px;
   }
   &__item-title {
     font-size: 18px;
@@ -396,9 +405,14 @@ select {
     margin-bottom: 20px;
   }
   .social {
-    max-width: 66px;
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
+    a {
+      display: flex;
+      justify-content: center;
+      width: 14px;
+      height: 14px;
+    }
   }
   .support {
     margin-bottom: 33px;
