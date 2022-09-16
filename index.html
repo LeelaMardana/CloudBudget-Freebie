@@ -27,9 +27,9 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <div class="header-wrapper">
-          <nav class="navbar">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar__wrap">
             <div class="logo">
               <a class="logo__link" href="#"
                 ><img class="logo__img" src="img/logo.svg" alt="logo" />
@@ -39,10 +39,18 @@
             <ul class="menu">
               <li class="menu__item"><a href="#about">OVERVIEW</a></li>
               <li class="menu__item"><a href="#features">FEATURES</a></li>
-              <li class="menu__item"><a href="#technology">TECHNOLOGY</a></li>
+              <li class="menu__item">
+                <a href="#technology">TECHNOLOGY</a>
+              </li>
               <li class="menu__item"><a href="#contact">CONTACT</a></li>
               <li class="menu__item"><a href="#">Sign up</a></li>
             </ul>
+            <div class="menu-btn">
+              <div class="burger">
+                <span></span>
+              </div>
+            </div>
+
             <div class="addition">
               <div class="addition__lang">
                 <span><img src="./img/lang.svg" alt="lang" /></span>
@@ -53,7 +61,11 @@
               </div>
               <button class="addition__authorization-btn">LOGIN</button>
             </div>
-          </nav>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="header-wrapper">
           <div class="hero">
             <h1 class="hero__title">CloudBudget</h1>
             <p class="hero__text">

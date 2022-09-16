@@ -1,0 +1,140 @@
+.navbar {
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  top: 0;
+  left: 0;
+  &__wrap {
+    padding-top: 17px;
+    transition: all 0.5s;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu {
+    width: 440px;
+    @extend %l400;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    gap: 20px;
+    &__item :hover {
+      @extend %l700;
+    }
+  }
+  .addition {
+    display: flex;
+    gap: 25px;
+    &__lang {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+    &__authorization-btn {
+      border-radius: 6px;
+      background-color: transparent;
+      border: 1px solid #fff;
+      color: inherit;
+      width: 100px;
+      height: 40px;
+      cursor: pointer;
+    }
+  }
+  .menu-btn {
+    display: none;
+    position: relative;
+    order: 1;
+    width: 40px;
+    height: 40px;
+  }
+  .burger {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  .burger span,
+  .burger span:before,
+  .burger span:after {
+    width: 100%;
+    position: absolute;
+    height: 5px;
+    background-color: $white;
+    display: block;
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+  .burger span:before {
+    content: '';
+    top: -12px;
+    transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .burger span {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .burger span:after {
+    content: '';
+    bottom: -12px;
+    transition: bottom 300ms 300ms,
+      transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .burger span.active:before {
+    content: '';
+    top: 0px;
+    transform: rotate(45deg);
+    transition: top 300ms,
+      transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .burger span.active:after {
+    content: '';
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 300ms,
+      transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .burger span.active {
+    background: rgba(255, 255, 255, 0);
+  }
+}
+@media (max-width: 992px) {
+  .navbar {
+    background: linear-gradient(
+      90deg,
+      rgba(213, 32, 71, 0.9) 0%,
+      rgba(238, 61, 27, 0.9) 100%
+    );
+    &__wrap {
+      padding: 0;
+      height: 60px;
+    }
+    .menu {
+      top: 60px;
+      flex-direction: column;
+      justify-content: start;
+      height: auto;
+      font-size: 20px;
+      align-items: center;
+      gap: 35px;
+      background: linear-gradient(
+        90deg,
+        rgba(213, 32, 71, 0.9) 0%,
+        rgba(238, 61, 27, 0.9) 100%
+      );
+      padding: 100px 15px;
+      width: 100%;
+      position: fixed;
+      left: -100%;
+      transition: left 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .menu.animate {
+      left: 0;
+    }
+    .menu-btn {
+      display: block;
+    }
+  }
+}

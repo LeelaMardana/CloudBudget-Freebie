@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'fonts';
 @import 'vars';
+@import 'navbar';
 
 body {
   background-color: $white;
@@ -10,47 +11,9 @@ body {
   line-height: 140%;
 }
 .container {
-  max-width: 1130px;
-  padding: 0 10px;
+  max-width: 1140px;
+  padding: 0 15px;
   margin: 0 auto;
-  z-index: 1;
-}
-
-.navbar {
-  padding-top: 17px;
-  min-height: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  .menu {
-    width: 440px;
-    @extend %l400;
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    gap: 20px;
-    &__item :hover {
-      @extend %l700;
-    }
-  }
-  .addition {
-    display: flex;
-    gap: 25px;
-    &__lang {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-    }
-    &__authorization-btn {
-      border-radius: 6px;
-      background-color: transparent;
-      border: 1px solid #fff;
-      color: inherit;
-      width: 100px;
-      height: 40px;
-      cursor: pointer;
-    }
-  }
 }
 
 .logo {
@@ -65,6 +28,7 @@ body {
 }
 
 .header {
+  padding-top: 100px;
   min-height: 100vh;
   color: $white;
   font-size: 14px;
@@ -294,6 +258,7 @@ body {
   }
   &__slider {
     position: relative;
+    z-index: 0;
     // use without slider
     // &::after {
     //   content: '';
@@ -442,3 +407,5 @@ select {
     height: 31px;
   }
 }
+
+@import 'media';
