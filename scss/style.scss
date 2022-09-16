@@ -3,6 +3,7 @@
 @import 'vars';
 @import 'navbar';
 
+
 body {
   background-color: $white;
   color: $black;
@@ -145,7 +146,6 @@ body {
     display: flex;
     gap: 30px;
   }
-
   &__item {
     width: 350px;
     height: 430px;
@@ -195,8 +195,7 @@ body {
 }
 
 .technology {
-  padding: 63px 0 104px;
-  margin-bottom: 52px;
+  padding: 63px 0 124px;
   color: #101010;
   text-align: center;
   &__items {
@@ -295,12 +294,13 @@ body {
 
 .swiper {
   border-radius: 15px;
-  width: 445px;
+  width: 100%;
+  max-width: 445px;
   height: 311px;
 }
 .swiper-slide {
-  object-fit: cover;
   img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
   }
@@ -310,6 +310,7 @@ body {
   padding: 120px 0;
   &__wrapper {
     display: flex;
+    gap: 30px;
     justify-content: space-between;
   }
   &__content {
