@@ -73,13 +73,13 @@ const smoothScroll = (function () {
 })();
 
 //Слайдер
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  loop: true,
-  effect: 'fade',
-  speed: 1000,
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  },
-});
+// const swiper = new Swiper('.swiper', {
+//   // Optional parameters
+//   loop: true,
+//   effect: 'cards',
+//   speed: 1000,
+//   // autoplay: {
+//   //   delay: 2000,
+//   //   disableOnInteraction: false,
+//   // },
+// });
