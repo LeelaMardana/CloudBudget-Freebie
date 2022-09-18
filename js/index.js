@@ -52,6 +52,7 @@ const navbar = (function () {
 //Плавный скролл
 const smoothScroll = (function () {
   const menu = document.querySelector('.menu');
+  const services = document.querySelector('.services');
 
   //функция плавного скролла
   const scrollTo = id => {
@@ -70,16 +71,26 @@ const smoothScroll = (function () {
       scrollTo(attr);
     }
   });
+
+  services.addEventListener('click', e => {
+    if (e.target.closest('li a')) {
+      e.preventDefault();
+      const attr = e.target.closest('li a').getAttribute('href');
+      if (attr === '#') return;
+      scrollTo(attr);
+    }
+  });
 })();
 
 //Слайдер
-// const swiper = new Swiper('.swiper', {
-//   // Optional parameters
-//   loop: true,
-//   effect: 'cards',
-//   speed: 1000,
-//   // autoplay: {
-//   //   delay: 2000,
-//   //   disableOnInteraction: false,
-//   // },
-// });
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  loop: true,
+  effect: 'fade',
+  grabCursor: true,
+  speed: 1000,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+});
